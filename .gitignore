@@ -1,0 +1,23 @@
+# --- IDE Settings ---
+.vscode/
+.idea/
+*.swp
+
+# --- Compiled Binaries & Executables ---
+*.exe
+*.o
+*.obj
+*.out
+# Specific to Windows/Mingw
+a.exe
+
+# --- Build Directories ---
+bin/
+build/
+debug/
+release/
+
+# --- OS Generated Files ---
+Thumbs.db
+Desktop.ini
+.DS_Store
