@@ -47,11 +47,44 @@ class Student : public Person {
     
     }
 } ;
+
+class GradStudent : public Student {
+    public:
+    string thesisTopic;
+
+    GradStudent(string name, int age, int rollNumber, string thesisTopic) : Student(name, age, rollNumber) {
+        this->thesisTopic = thesisTopic;
+    }
+
+    void getInfo() {
+        Student::getInfo();
+        cout << "Thesis Topic: " << thesisTopic << endl;
+    }
+};
+
+class Teacher  {
+    public:
+    string subject;
+    double salary;
+};
+
+class TA : public Student , public Teacher {
+    public:
+    string ResearchArea;
+
+};
 int main() {
 
-    Student s1("John", 20, 101);
+    GradStudent s1("John", 20, 101 , "AI");
    
     s1.getInfo();
+
+    TA t1;
+    t1.name = "Alice";
+    t1.subject = "Mathematics";
+
+    cout << "TA Name: " << t1.name << endl;
+    cout << "TA Subject: " << t1.subject << endl;
     
 
     return 0;
